@@ -15,7 +15,6 @@ export const WORDS = [
   'OCEAN',
   'PIANO',
   'QUEEN',
-  'SAYAL'
   'RADIO',
   'SMILE',
   'TIGER',
