@@ -1,0 +1,211 @@
+:root {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #f0f0f0;
+  background-color: #1e1e2f;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --correct: #4caf50;
+  --present: #ffca28;
+  --absent: #9e9e9e;
+  --border: #cfcfcf;
+  --text-color: #2c2c2e;
+  --background: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f5;
+  color: var(--text-color);
+  min-height: 100vh;
+  align-items: center;
+}
+
+a {
+  font-weight: 500;
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  color: #0056b3;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #4c6ef5;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px var(--shadow);
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+button:hover {
+  background-color: #3b5bdb;
+  transform: scale(1.05);
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.5);
+}
+
+.game-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px var(--shadow);
+  margin: 20px;
+}
+
+.header h1 {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tile {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--background);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.tile.correct {
+  background-color: var(--correct);
+  border-color: var(--correct);
+  color: white;
+}
+
+.tile.present {
+  background-color: var(--present);
+  border-color: var(--present);
+  color: white;
+}
+
+.tile.absent {
+  background-color: var(--absent);
+  border-color: var(--absent);
+  color: white;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.keyboard-key {
+  min-width: 40px;
+  height: 40px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.key {
+  min-width: 42px;
+  height: 58px;
+  border-radius: 6px;
+  border: none;
+  background-color: #e0e0e0;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: background-color 0.2s ease;
+}
+.keyboard-key.enter {
+  min-width: 70px;
+  background: #e0e0e0;
+  font-weight: bold;
+}
+.key:hover {
+  background-color: #d5d5d5;
+}
+.key.correct {
+  background-color: var(--correct);
+  color: white;
+}
+.key.present {
+  background-color: var(--present);
+  color: white;
+}
+.key.absent {
+  background-color: var(--absent);
+  color: white;
+}
+
+.message {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  height: 30px;
+  color: var(--text-color);
+}
+
+.key-enter {
+  flex: 2; /* Make the ENTER key wider */
+  background-color: #d4d4d4; /* Slightly different color for distinction */
+  font-weight: bold;
+}
